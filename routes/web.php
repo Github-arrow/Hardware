@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SalesController;
+use App\Http\Controllers\PrintController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,5 +36,14 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
+
+    Route::controller(SalesController::class)->prefix('sales')->group(function(){
+        Route::post('/search',[SalesController::class, 'search'])->name('search');
+        Route::post('/sales_add', [SalesController::class, 'store'])->name('sales_add');
+    });
+
+    Route::get('/print/form/{last_Id}',[PrintController::class, 'showPrintForm'])->name('print.form');
+
+    
 });
 

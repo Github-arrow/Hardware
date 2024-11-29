@@ -4,6 +4,5 @@
  
 @section('contents')
 <hr>
-  <div class="row">
-  </div>
+  <h1>This is your Dashboard</h1>
 @endsection

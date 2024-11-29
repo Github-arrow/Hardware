@@ -1,7 +1,8 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
  
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center mb-3 mt-3">
+      <i class="fa fa-home" aria-hidden="true"></i>
       <div class="sidebar-brand-icon rotate-n-15">
       </div>
       <div class="sidebar-brand-text mx-3">Admin Panel</div>
@@ -9,12 +10,12 @@
 
     
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider my-0 mb-3">
    
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
       <a class="nav-link" href="{{ route('dashboard') }}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i>
         <span>Dashboard</span></a>
     </li>
    
@@ -43,7 +44,8 @@
     </li>
    
     <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
-   
+    <hr class="sidebar-divider d-none d-md-block mt-4">
+
   </ul>
+  
   

@@ -16,9 +16,10 @@
         <thead class="table-primary">
             <tr>
                 <th>#</th>
-                <th>Title</th>
+                <th>Brand</th>
                 <th>Price</th>
-                <th>Product Code</th>
+                <th>Quantity</th>
+                <th>Expiry Date</th>
                 <th>Description</th>
                 <th class="d-flex justify-content-end">Action</th>
             </tr>
@@ -29,14 +30,15 @@
                 @foreach($product as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $rs->title }}</td>
+                        <td class="align-middle">{{ $rs->brand }}</td>
                         <td class="align-middle">{{ $rs->price }}</td>
-                        <td class="align-middle">{{ $rs->product_code }}</td>
+                        <td class="align-middle">{{ $rs->quantity }}</td>
+                        <td class="align-middle">{{ $rs->expiry }}</td>
                         <td class="align-middle">{{ $rs->description }}</td>  
                         <td class="d-flex align-items-end justify-content-end">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="{{ route('products.show', $rs->id) }}" type="button" class="btn btn-secondary">Detail</a>
-                                <a href="{{ route('products.edit', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
+                                <a href="{{ route('products.show', $rs->id) }}" type="button" class="btn btn-secondary">View</a>
+                                <a href="{{ route('products.edit', $rs->id)}}" type="button" class="btn btn-warning">Update</a>
                                 <form action="{{ route('products.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')
