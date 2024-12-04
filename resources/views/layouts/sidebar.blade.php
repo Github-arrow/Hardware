@@ -32,7 +32,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="/profile">
+      <a class="nav-link" href="/pos">
         <i class="fa fa-desktop" aria-hidden="true"></i>
         <span>POS</span></a>
     </li>

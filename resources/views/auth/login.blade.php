@@ -34,7 +34,7 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="text-primary fs-3 fw-bold">JMKT Hardware</h1>
+                    <h1 class="text-primary fs-3 fw-bold">JMKV Hardware</h1>
                   </div>
                   <hr>
                   <div class="text-center">

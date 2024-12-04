@@ -30,11 +30,11 @@
                 <label class="form-label">Quantity</label>
                 <input type="integer" name="quantity" class="form-control" placeholder="Pieces or Box or Kilo" value="{{ $product->quantity }}" readonly>
             </div>
-            <div class="col-3">
+            {{-- <div class="col-3">
                 <label class="form-label">Expiry Date</label>
                 <input type="date" name="expiry" class="form-control" placeholder="expiry" value="{{ $product->expiry }}" readonly>
-            </div>
-            <div class="col-6">
+            </div> --}}
+            <div class="col-9">
                 <label class="form-label">Description</label>
                 <textarea class="form-control" name="description" placeholder="Details of the product" readonly>{{ $product->description }}</textarea>
             </div>

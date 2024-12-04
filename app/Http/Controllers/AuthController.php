@@ -70,4 +70,9 @@ class AuthController extends Controller
     {
         return view('profile');
     }
+    public function pos()
+    {
+        return view('/pos');
+    }
+
 }

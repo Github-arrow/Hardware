@@ -37,10 +37,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 
-    Route::controller(SalesController::class)->prefix('sales')->group(function(){
-        Route::post('/search',[SalesController::class, 'search'])->name('search');
-        Route::post('/sales_add', [SalesController::class, 'store'])->name('sales_add');
-    });
+    Route::resource('/sales', SalesController::class);
+    Route::post('/search',[SalesController::class, 'search'])->name('search');
+    Route::post('/sales_add', [SalesController::class, 'store'])->name('sales_add');
+
+    Route::get('/pos', [App\Http\Controllers\AuthController::class, 'pos'])->name('pos');
 
     Route::get('/print/form/{last_Id}',[PrintController::class, 'showPrintForm'])->name('print.form');
 
